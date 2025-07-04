@@ -26,7 +26,7 @@
       }
     },
     {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "title": "Custom External Widget 1",
       "type": "custom_external_widget_1",
       "description": "External Widget 1 for displaying interesting content",
