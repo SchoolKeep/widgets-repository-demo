@@ -49,6 +49,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Custom External Widget 2",
+      "type": "custom_external_widget_2",
+      "description": "External Widget 2 for displaying interesting content",
+      "category": "external",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "custom_external_widget_2",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/custom_external_widget_2/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
