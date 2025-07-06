@@ -74,6 +74,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Demo widget",
+      "type": "demo_widget",
+      "description": "Demo widget for displaying interesting content",
+      "category": "Demo",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "demo_widget",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/demo_widget/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
