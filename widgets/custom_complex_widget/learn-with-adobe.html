@@ -1,0 +1,219 @@
+<style>
+	.learn-with-adobe {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		padding: 0 2rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.learn-with-adobe__title {
+		margin-bottom: 16px;
+		text-align: left;
+		font: normal normal 800 22px / 20px adobe-clean;
+		letter-spacing: 0px;
+		color: #222222;
+		opacity: 1;
+		height: 27px;
+		font-family: adobe-clean;
+	}
+
+	.learn-with-adobe__cards {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.card {
+		position: relative;
+		border-radius: 12px;
+		padding: 1.5rem;
+		cursor: pointer;
+		transition: transform 0.2s ease-in-out;
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 288px;
+		height: 265px;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	.card::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		opacity: 1;
+		z-index: 0;
+		pointer-events: none;
+		transition: opacity 0.2s;
+	}
+
+	.card[data-bgimg]::after {
+		background-image: var(--card-bgimg);
+	}
+
+	.card-body-wraper {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.card-title {
+		font-family: adobe-clean;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 19px;
+	}
+
+	.card-anchor {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		margin-left: 6px;
+	}
+
+	.card-info {
+		font-family: adobe-clean;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 18px;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.learn-with-adobe__card--pink {
+		background-color: #fdbefc;
+	}
+
+	.learn-with-adobe__card--blue {
+		background-color: #a4ecf7;
+	}
+
+	.learn-with-adobe__card--green {
+		background-color: #b8ee92;
+	}
+</style>
+
+<section class="learn-with-adobe">
+	<h2 class="learn-with-adobe__title">Learn with Adobe</h2>
+	<div class="learn-with-adobe__cards">
+		<div
+			tabindex="0"
+			role="link"
+			class="card creative-card learn-with-adobe__card learn-with-adobe__card--pink"
+			data-bgimg=""
+			style="
+				--card-bgimg: url('https://community.adobe.com/html/@B1136CDC103EB55F9E96EDBD870F5450/assets/Learn-img.svg');
+			"
+			onclick="handleCardClick('https://creativecloud.adobe.com/cc/learn')"
+			onkeydown="handleCardKeyDown(event, 'https://creativecloud.adobe.com/cc/learn')"
+			aria-label="Learn: Learn with step-by-step video tutorials and hands-on guidance right in the app."
+		>
+			<div class="card-body-wraper">
+				<div class="card-header">
+					<span class="card-title">Learn</span>
+					<img
+						class="card-anchor"
+						src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+						loading="lazy"
+						alt="learn-resources"
+					/>
+				</div>
+				<span class="card-info"
+					>Learn with step-by-step video tutorials and hands-on
+					guidance right in the app.</span
+				>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="card creative-card learn-with-adobe__card learn-with-adobe__card--blue"
+			data-bgimg=""
+			style="
+				--card-bgimg: url('https://community.adobe.com/html/@DE7B160A199DE9E93CEEDCAC76D891F7/assets/Help-icon.svg');
+			"
+			onclick="handleCardClick('https://helpx.adobe.com/support.html')"
+			onkeydown="handleCardKeyDown(event, 'https://helpx.adobe.com/support.html')"
+			aria-label="Help &amp; Support: Get help managing your account and using apps with how-tos and troubleshooting."
+		>
+			<div class="card-body-wraper">
+				<div class="card-header">
+					<span class="card-title">Help &amp; Support</span>
+					<img
+						class="card-anchor"
+						src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+						loading="lazy"
+						alt="learn-resources"
+					/>
+				</div>
+				<span class="card-info"
+					>Get help managing your account and using apps with how-tos
+					and troubleshooting.</span
+				>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="card creative-card learn-with-adobe__card learn-with-adobe__card--green"
+			data-bgimg=""
+			style="
+				--card-bgimg: url('https://community.adobe.com/html/@272798121AE120060662E23E558976FC/assets/Discover-icon.svg');
+			"
+			onclick="handleCardClick('https://creativecloud.adobe.com/cc/discover')"
+			onkeydown="handleCardKeyDown(event, 'https://creativecloud.adobe.com/cc/discover')"
+			aria-label="Discover: Stay on top of creative trends with how-tos and giveaways."
+		>
+			<div class="card-body-wraper">
+				<div class="card-header">
+					<span class="card-title">Discover</span>
+					<img
+						class="card-anchor"
+						src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+						loading="lazy"
+						alt="learn-resources"
+					/>
+				</div>
+				<span class="card-info"
+					>Stay on top of creative trends with how-tos and
+					giveaways.</span
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	function handleCardClick(url) {
+		window.open(url, "_blank");
+	}
+
+	function handleCardKeyDown(event, url) {
+		if (event.key === "Enter") {
+			window.open(url, "_blank");
+		}
+	}
+</script>

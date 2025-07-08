@@ -99,6 +99,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Custom Complex Widget",
+      "type": "custom_complex_widget",
+      "description": "Complex React widget for displaying interactive content",
+      "category": "complex",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "custom_complex_widget",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/custom_complex_widget/dist/index.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }

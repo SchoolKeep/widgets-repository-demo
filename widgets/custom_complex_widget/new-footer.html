@@ -1,0 +1,642 @@
+<style>
+	/* Reset default styles */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		width: 100%;
+		min-width: 100%;
+		overflow-x: hidden;
+	}
+
+	body {
+		font-family: "AdobeClean", -apple-system, BlinkMacSystemFont, "Segoe UI",
+			Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		line-height: 1.5;
+		color: #2c2c2c;
+	}
+
+	/* Footer Styles */
+	.footer {
+		background-color: #f5f5f5;
+		padding: 32px 24px;
+		margin-top: 32px;
+	}
+
+	.footer__container {
+		margin: 0 96px 0 48px;
+	}
+
+	.footer__sections {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer__section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer__section-header {
+		font-size: 14px;
+		font-weight: 600;
+		color: #2c2c2c;
+		padding-bottom: 8px;
+	}
+
+	.footer__section-header-label {
+		display: block;
+	}
+
+	.footer__links {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin-bottom: 14px;
+	}
+
+	.footer__link-item {
+		font-size: 13px;
+	}
+
+	.footer__link {
+		color: #2c2c2c;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.footer__link:hover {
+		color: #1473e6;
+		text-decoration: underline;
+	}
+
+	/* Responsive Design */
+	@media screen and (max-width: 768px) {
+		.footer {
+			padding: 24px 16px;
+		}
+
+		.footer__sections {
+			grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			gap: 32px;
+		}
+
+		.footer__section {
+			gap: 10px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.footer {
+			padding: 20px 12px;
+		}
+
+		.footer__sections {
+			grid-template-columns: 1fr;
+			gap: 16px;
+		}
+
+		.footer__section {
+			gap: 8px;
+		}
+
+		.footer__section-header {
+			font-size: 13px;
+			margin-bottom: 1px;
+		}
+
+		.footer__section-header-label {
+			margin-bottom: 3px;
+		}
+
+		.footer__link-item {
+			font-size: 12px;
+		}
+	}
+</style>
+
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__sections">
+			<!-- Shop for Section -->
+			<div class="footer__section">
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">Shop for</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Creative Cloud</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/products/photoshop.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Photoshop</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/express/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Adobe Express</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud/photography.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Photography</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/products/premiere.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Premiere Pro</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://stock.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Adobe Stock</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/products/elements-family.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Elements Family</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/documentcloud.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Document Cloud</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/acrobat.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Acrobat</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/sign/business.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Acrobat Sign</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/products/special-offers.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Special offers</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud/plans.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>View plans and pricing</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/products/catalog.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&types=pf_252Fweb&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>View all products</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- For business Section -->
+			<div class="footer__section">
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label"
+						>For business</span
+					>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud/business.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Creative Cloud for business</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud/business/enterprise.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Creative Cloud for enterprise</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/acrobat/business.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Acrobat for business</a
+						>
+					</li>
+				</ul>
+
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">Education</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/creativecloud/buy/students.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Discounts for students and teachers</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/education.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Schools and universities</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/elearning.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Digital Learning Solutions</a
+						>
+					</li>
+				</ul>
+
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label"
+						>For nonprofits</span
+					>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/nonprofits.html"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Nonprofit overview</a
+						>
+					</li>
+				</ul>
+
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">For mobile</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.apple.com/app-store/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Apps for iOS</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://play.google.com/store/search?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&q=adobe&c=apps&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Apps for Android</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Experience Cloud Section -->
+			<div class="footer__section">
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label"
+						>Experience Cloud</span
+					>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>What is Experience Cloud?</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/products/analytics/adobe-analytics.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Analytics</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/products/experience-manager/adobe-experience-manager.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Experience Manager</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/products/magento/magento-commerce.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Commerce</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/products/marketo/adobe-marketo.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Marketo Engage</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://business.adobe.com/products/workfront/main.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Workfront</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/go/experiencecloudterms?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Terms of Use</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Support Section -->
+			<div class="footer__section">
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">Support</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://helpx.adobe.com/download-install.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Download and install</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://helpx.adobe.com/support.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Help Center</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://community.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en&profile.language=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Adobe Support Community</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://helpx.adobe.com/contact/enterprise-support.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Enterprise Support</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/genuine.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Genuine software</a
+						>
+					</li>
+				</ul>
+
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">Resources</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://blog.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Adobe Blog</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://developer.adobe.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Adobe Developer</a
+						>
+					</li>
+				</ul>
+
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label"
+						>Adobe Account</span
+					>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://account.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en&lang=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Log in to your account</a
+						>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Adobe Section -->
+			<div class="footer__section">
+				<h4 class="footer__section-header">
+					<span class="footer__section-header-label">Adobe</span>
+				</h4>
+				<ul class="footer__links">
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/about-adobe.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>About</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/ai.html"
+							target="_blank"
+							rel="noopener noreferrer"
+							>AI Overview</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/careers.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Careers</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://news.adobe.com/?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Newsroom</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/corporate-responsibility.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Corporate responsibility</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/investor-relations.html"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Investor Relations</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/corporate-responsibility/supply-chain.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Supply chain</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/trust.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Trust Center</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/events.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Events</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/diversity.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Diversity and inclusions</a
+						>
+					</li>
+					<li class="footer__link-item">
+						<a
+							class="footer__link"
+							href="https://www.adobe.com/uk/about-adobe/integrity.html?promoid=XKMMH7MW&xProduct=&mv=other&mv2=ahome&xProductLocation=&cchClientLanguage=en&userLanguage=en&productLanguage=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Integrity</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>

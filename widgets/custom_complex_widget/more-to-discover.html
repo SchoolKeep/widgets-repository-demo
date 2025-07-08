@@ -1,0 +1,794 @@
+<style>
+	@font-face {
+		font-family: "AdobeClean";
+		src: local("Adobe Clean"), local("AdobeClean"),
+			url("/fonts/AdobeClean-Regular.woff2") format("woff2"),
+			url("/fonts/AdobeClean-Regular.woff") format("woff");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	.more-to-discover {
+		width: 1140px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 16px;
+		padding: 0 10px;
+	}
+
+	.more-to-discover__title {
+		margin-bottom: 24px;
+		justify-content: flex-start;
+		display: flex;
+		text-align: left;
+		font-family: "AdobeClean";
+		font-size: 22px;
+		font-weight: 800;
+		letter-spacing: 0px;
+		color: #222222;
+		opacity: 1;
+		height: 27px;
+	}
+
+	.more-to-discover__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 32px;
+		justify-items: stretch;
+	}
+
+	.more-to-discover__card {
+		background: #f9f9f9;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px;
+		padding: 13px;
+		min-width: 0;
+		max-width: 100%;
+		min-height: 48px;
+		max-height: 82px;
+		cursor: pointer;
+		transition: box-shadow 1s;
+		outline: none;
+		border: none;
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.more-to-discover__card:focus,
+	.more-to-discover__card:hover {
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+		transition: box-shadow 1s;
+	}
+
+	.more-to-discover__card-row {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	.more-to-discover__card-icon-col {
+		margin-right: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 2px;
+	}
+
+	.more-to-discover__card-icon {
+		width: 30px;
+		height: 29px;
+		border-radius: 8px;
+		background: #f5f5f5;
+		object-fit: contain;
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+	}
+
+	.more-to-discover__card-info-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.more-to-discover__card-title {
+		font-size: 14px;
+		font-weight: 700;
+		color: #222;
+		font-family: "AdobeClean", "Avenir", "Segoe UI", Arial, sans-serif;
+		margin-bottom: 0.2rem;
+		text-align: left;
+	}
+
+	.more-to-discover__card-count {
+		display: flex;
+		align-items: center;
+		margin-top: 2px;
+	}
+
+	.more-to-discover__card-count-icon {
+		width: 14px;
+		height: 14px;
+		margin-right: 6px;
+		opacity: 0.7;
+	}
+
+	.more-to-discover__card-count-text {
+		font-size: 11px;
+		color: #444;
+		font-family: "AdobeClean", "Avenir", "Segoe UI", Arial, sans-serif;
+	}
+
+	@media (max-width: 1200px) {
+		.more-to-discover__cards {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 18px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		.more-to-discover__cards {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 14px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.more-to-discover__title {
+			font-size: 1.3rem;
+			margin-bottom: 1rem;
+		}
+		.more-to-discover__cards {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+		.more-to-discover__card {
+			padding: 1rem 0.8rem 1rem 0.8rem;
+		}
+		.more-to-discover__card-title {
+			font-size: 1rem;
+		}
+		.more-to-discover__card-count-text {
+			font-size: 0.95rem;
+		}
+	}
+</style>
+
+<section class="more-to-discover">
+	<div class="more-to-discover__cards">
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Photoshop ecosystem: 126.9K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@1D58260C96692A32775D6CE5FCCEE49C/assets/icons/photoshop.svg"
+						alt="Photoshop ecosystem"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Photoshop ecosystem
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Acrobat: 85.0K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@BF497F760DA3BAC3F8039ED548C3B448/assets/icons/acrobat-reader.svg"
+						alt="Acrobat"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Acrobat</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Adobe Firefly: 8.0K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@02C7929CE984F070C87B75DE941E3E0B/assets/icons/adobe-firefly.svg"
+						alt="Adobe Firefly"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Adobe Firefly
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Adobe Express: 14.6K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@D32ACEA1FCC72EDB4FBC85A6AB6748E1/assets/icons/adobe-express.svg"
+						alt="Adobe Express"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Adobe Express
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Adobe Events: 2 conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@5191A445398014F26F24B9C1A088DF6D/assets/icons/creative-cloud.svg"
+						alt="Adobe Events"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Adobe Events</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Premiere Pro: 97.1K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@E441B8333A938FE9FF2FE7C117078AE1/assets/icons/premiere-pro.svg"
+						alt="Premiere Pro"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Premiere Pro</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Illustrator: 62.8K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@CFC7EAFFBF2C4479EC603993CDF62CD0/assets/icons/illustrator.svg"
+						alt="Illustrator"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Illustrator</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="After Effects: 52.8K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@940D54FF19919DDFC241A0BAA4E03A8E/assets/icons/after-effects.svg"
+						alt="After Effects"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						After Effects
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="InDesign: 73.7K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@F054039F2240A0E71BF63DF0EE981D2F/assets/icons/indesign.svg"
+						alt="InDesign"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">InDesign</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Photoshop (Beta): 3.8K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@72249AE883825C4A103DA552FDD47E68/assets/icons/photoshop-beta.svg"
+						alt="Photoshop (Beta)"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Photoshop (Beta)
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Lightroom ecosystem (Cloud-based): 25.5K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@2877241F8D3AB8E3AA064B84F29DE67C/assets/icons/lightroom.svg"
+						alt="Lightroom ecosystem (Cloud-based)"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Lightroom ecosystem (Cloud-based)
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Lightroom Classic: 62.4K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@125E8AA0F308457B797F162334FA66C4/assets/icons/lightroom-classic.svg"
+						alt="Lightroom Classic"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">
+						Lightroom Classic
+					</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Audition: 9.5K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@AA235C416CDD12DD75D012CF71EE329C/assets/icons/audition.svg"
+						alt="Audition"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Audition</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Animate: 68.8K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@6BE11BA41F1F3AD6E353BA82895D1A10/assets/icons/animate.svg"
+						alt="Animate"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Animate</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Fresco: 3.1K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@954734732E3AAF666AD84552E7317E3D/assets/icons/fresco.svg"
+						alt="Fresco"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Fresco</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			tabindex="0"
+			role="link"
+			class="more-to-discover__card"
+			onclick="handleCardClick('/p/adobe')"
+			onkeydown="handleCardKeyDown(event, '/p/adobe')"
+			aria-label="Stock: 7.9K conversations"
+		>
+			<div class="more-to-discover__card-row">
+				<div class="more-to-discover__card-icon-col">
+					<img
+						class="more-to-discover__card-icon"
+						src="https://community.adobe.com/html/@B136C283E49380304275BA354A1DA36F/assets/icons/stock.svg"
+						alt="Stock"
+						loading="lazy"
+						width="40"
+						height="40"
+					/>
+				</div>
+				<div class="more-to-discover__card-info-col">
+					<div class="more-to-discover__card-title">Stock</div>
+					<div class="more-to-discover__card-count">
+						<img
+							src="https://community.adobe.com/html/@7DC9EE4D36645EC6182A2A69C44A7E45/assets/S2_Black-outlink-icon.svg"
+							alt="conversations"
+							class="more-to-discover__card-count-icon"
+							loading="lazy"
+							width="16"
+							height="16"
+						/>
+						<span class="more-to-discover__card-count-text"
+							>Launch Community</span
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	function handleCardClick(url) {
+		window.open(url, "_blank");
+	}
+
+	function handleCardKeyDown(event, url) {
+		if (event.key === "Enter") {
+			window.open(url, "_blank");
+		}
+	}
+</script>
