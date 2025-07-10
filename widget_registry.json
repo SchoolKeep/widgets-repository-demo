@@ -149,6 +149,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Dad Jokes Flip Cards",
+      "type": "dad_jokes_flipcards",
+      "description": "Interactive flip cards with 5 clean dad jokes - hover to reveal punchlines",
+      "category": "entertainment",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "dad_jokes_flipcards",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/dad_jokes_flipcards/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
