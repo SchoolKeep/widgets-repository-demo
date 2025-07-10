@@ -127,8 +127,8 @@
     },
     {
       "version": "1.0.0",
-      "title": "Pulse Europe 2025",
-      "type": "pulse_europe_widget",
+      "title": "Pulse Europe 2025 New",
+      "type": "pulse_europe_widget_new",
       "description": "Pulse Europe 2025 conference registration widget with Gainsight branding",
       "category": "Pulse",
       "containers": [
