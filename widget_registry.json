@@ -130,7 +130,7 @@
       "title": "Pulse Europe 2025 New",
       "type": "pulse_europe_widget_new",
       "description": "Pulse Europe 2025 conference registration widget with Gainsight branding",
-      "category": "Pulse",
+      "category": "pulse",
       "containers": [
         "Full width"
       ],
