@@ -124,6 +124,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Pulse Dublin Coming Soon",
+      "type": "pulse_dublin_widget",
+      "description": "Gainsight Pulse Dublin conference banner widget",
+      "category": "events",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "pulse_dublin_widget",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/pulse_dublin_widget/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
