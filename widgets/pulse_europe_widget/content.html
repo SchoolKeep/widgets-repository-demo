@@ -1,0 +1,117 @@
+<style>
+    .pulse-europe-widget {
+        background: #f5f5f5;
+        padding: 40px 20px;
+        border-radius: 8px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        min-height: 200px;
+    }
+
+    .gainsight-logo {
+        width: 120px;
+        height: 120px;
+        background: #8B5CF6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        flex-shrink: 0;
+    }
+
+    .content-center {
+        flex: 1;
+        text-align: center;
+        padding: 0 40px;
+    }
+
+    .pulse-title {
+        font-size: 3.5rem;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 30px;
+        letter-spacing: 8px;
+        line-height: 1.2;
+    }
+
+    .register-button {
+        background: #8B5CF6;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .register-button:hover {
+        background: #7C3AED;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .pulse-europe-widget {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .gainsight-logo {
+            width: 80px;
+            height: 80px;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .content-center {
+            padding: 20px 0;
+        }
+        
+        .pulse-title {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+        }
+        
+        .register-button {
+            font-size: 1rem;
+            padding: 12px 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pulse-title {
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        
+        .pulse-europe-widget {
+            margin: 10px;
+        }
+    }
+</style>
+
+<div class="pulse-europe-widget">
+    <div class="gainsight-logo">G</div>
+    <div class="content-center">
+        <h1 class="pulse-title">PULSE<br>EUROPE 2025</h1>
+        <a href="https://gainsightpulse.com/europe/register/" class="register-button" target="_blank">
+            REGISTER TODAY!
+        </a>
+    </div>
+    <div class="gainsight-logo">G</div>
+</div> 

@@ -124,6 +124,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Pulse Europe 2025",
+      "type": "pulse_europe_widget",
+      "description": "Gainsight Pulse Europe 2025 conference registration widget",
+      "category": "events",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "pulse_europe_widget",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/pulse_europe_widget/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
