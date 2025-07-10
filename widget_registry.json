@@ -174,31 +174,6 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
-    },
-    {
-      "version": "1.0.0",
-      "title": "Pulse Neobrutalism Banner",
-      "type": "pulse_neobrutalism_banner",
-      "description": "Bold neobrutalism-style Pulse promotional banner with aggressive colors and geometric shapes",
-      "category": "pulse",
-      "containers": [
-        "Full width"
-      ],
-      "imageName": "pulse_neobrutalism_banner",
-      "widgetsLibrary": true,
-      "settings": {
-        "configurable": true,
-        "editable": true,
-        "removable": true,
-        "shared": false,
-        "movable": false
-      },
-      "content": {
-        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/pulse_neobrutalism_banner/content.html",
-        "method": "GET",
-        "requiresAuthentication": false,
-        "cacheStrategy": "no-cache"
-      }
     }
   ]
 }
