@@ -1,0 +1,151 @@
+<style>
+    .pulse-europe-widget {
+        background-color: #f5f5f5;
+        padding: 60px 40px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+        border-radius: 12px;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .gainsight-logo {
+        position: absolute;
+        font-size: 8rem;
+        font-weight: 900;
+        color: #8B5CF6;
+        opacity: 0.8;
+        user-select: none;
+        font-family: 'Arial', sans-serif;
+        line-height: 1;
+    }
+
+    .gainsight-logo.left {
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .gainsight-logo.right {
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .content-center {
+        z-index: 10;
+        position: relative;
+    }
+
+    .pulse-title {
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 40px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .pulse-subtitle {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 40px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .register-cta {
+        display: inline-block;
+        background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+        color: white;
+        padding: 18px 40px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        border: none;
+        cursor: pointer;
+    }
+
+    .register-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        text-decoration: none;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .pulse-europe-widget {
+            padding: 40px 20px;
+            min-height: 250px;
+        }
+        
+        .gainsight-logo {
+            font-size: 4rem;
+        }
+        
+        .gainsight-logo.left {
+            left: 20px;
+        }
+        
+        .gainsight-logo.right {
+            right: 20px;
+        }
+        
+        .pulse-title {
+            font-size: 2.2rem;
+            letter-spacing: 4px;
+        }
+        
+        .pulse-subtitle {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        
+        .register-cta {
+            padding: 15px 30px;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gainsight-logo {
+            font-size: 3rem;
+        }
+        
+        .pulse-title {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+        
+        .pulse-subtitle {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+    }
+</style>
+
+<div class="pulse-europe-widget">
+    <div class="gainsight-logo left">G</div>
+    <div class="gainsight-logo right">G</div>
+    
+    <div class="content-center">
+        <h1 class="pulse-title">PULSE</h1>
+        <h2 class="pulse-subtitle">EUROPE 2025</h2>
+        <a href="https://gainsightpulse.com/europe/register/" class="register-cta" target="_blank">
+            REGISTER TODAY!
+        </a>
+    </div>
+</div> 
