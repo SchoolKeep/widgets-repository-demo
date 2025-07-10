@@ -1,0 +1,222 @@
+<style>
+    .neobrutalism-banner {
+        background: linear-gradient(45deg, #FF3366 0%, #FF6B35 50%, #F7931E 100%);
+        padding: 40px;
+        border: 8px solid #000;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Arial Black', Arial, sans-serif;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-content {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    .gainsight-label {
+        background: #00FF88;
+        color: #000;
+        padding: 8px 20px;
+        border: 4px solid #000;
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        display: inline-block;
+        transform: rotate(-3deg);
+        box-shadow: 8px 8px 0px #000;
+    }
+
+    .pulse-title {
+        font-size: 5rem;
+        font-weight: 900;
+        color: #FFF;
+        text-shadow: 6px 6px 0px #000;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        line-height: 0.9;
+        transform: rotate(1deg);
+    }
+
+    .pulse-subtitle {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #FFFF00;
+        text-shadow: 4px 4px 0px #000;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        transform: rotate(-1deg);
+    }
+
+    .cta-button {
+        background: #00BFFF;
+        color: #000;
+        padding: 20px 40px;
+        border: 6px solid #000;
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.1s ease;
+        box-shadow: 12px 12px 0px #000;
+        text-decoration: none;
+        display: inline-block;
+        transform: rotate(2deg);
+    }
+
+    .cta-button:hover {
+        background: #FF00FF;
+        color: #FFF;
+        transform: rotate(2deg) translate(-4px, -4px);
+        box-shadow: 16px 16px 0px #000;
+        text-decoration: none;
+    }
+
+    .geometric-shape {
+        position: absolute;
+        border: 6px solid #000;
+    }
+
+    .shape-1 {
+        width: 100px;
+        height: 100px;
+        background: #FFFF00;
+        top: 20px;
+        left: 20px;
+        transform: rotate(45deg);
+        box-shadow: 6px 6px 0px #000;
+    }
+
+    .shape-2 {
+        width: 80px;
+        height: 80px;
+        background: #00FF88;
+        top: 30px;
+        right: 30px;
+        border-radius: 50%;
+        box-shadow: 6px 6px 0px #000;
+    }
+
+    .shape-3 {
+        width: 120px;
+        height: 60px;
+        background: #FF00FF;
+        bottom: 20px;
+        left: 50px;
+        transform: rotate(-15deg);
+        box-shadow: 6px 6px 0px #000;
+    }
+
+    .shape-4 {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 80px solid #00BFFF;
+        bottom: 40px;
+        right: 40px;
+        transform: rotate(30deg);
+        filter: drop-shadow(6px 6px 0px #000);
+    }
+
+    .zigzag-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: repeating-linear-gradient(
+            45deg,
+            #000 0px,
+            #000 20px,
+            #FFF 20px,
+            #FFF 40px
+        );
+    }
+
+    .dots-pattern {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 25% 25%, #000 2px, transparent 2px),
+            radial-gradient(circle at 75% 75%, #000 2px, transparent 2px);
+        background-size: 100px 100px;
+        opacity: 0.1;
+        z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+        .neobrutalism-banner {
+            padding: 20px;
+            min-height: 300px;
+        }
+        
+        .pulse-title {
+            font-size: 3rem;
+        }
+        
+        .pulse-subtitle {
+            font-size: 1.5rem;
+        }
+        
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+        
+        .geometric-shape {
+            transform: scale(0.7);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pulse-title {
+            font-size: 2.5rem;
+        }
+        
+        .pulse-subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .cta-button {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+        
+        .geometric-shape {
+            transform: scale(0.5);
+        }
+    }
+</style>
+
+<div class="neobrutalism-banner">
+    <div class="zigzag-border"></div>
+    <div class="dots-pattern"></div>
+    
+    <div class="geometric-shape shape-1"></div>
+    <div class="geometric-shape shape-2"></div>
+    <div class="geometric-shape shape-3"></div>
+    <div class="geometric-shape shape-4"></div>
+    
+    <div class="banner-content">
+        <div class="gainsight-label">GAINSIGHT</div>
+        <h1 class="pulse-title">PULSE</h1>
+        <h2 class="pulse-subtitle">2025 EUROPE</h2>
+        <a href="https://gainsightpulse.com/europe/register/" class="cta-button" target="_blank">
+            JOIN NOW!
+        </a>
+    </div>
+</div> 
