@@ -2,7 +2,7 @@
   "widgets": [
     {
       "version": "1.0.1",
-      "title": "Custom External Widget",
+      "title": "Custom External Widget testing",
       "type": "custom_external_widget",
       "description": "External Widget for displaying interesting content",
       "category": "external",
